@@ -1,6 +1,9 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
     agent any
+    options {
+        timeout(time: 7, unit: "SECONDS")
+    }
     stages {
         stage('build') {
             steps {
